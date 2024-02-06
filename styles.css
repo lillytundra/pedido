@@ -69,7 +69,7 @@ p {
   border: 1px;
   width: 100%;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
   .container {
     flex-direction: stack; /* Stack elements vertically on smaller screens */
   }
