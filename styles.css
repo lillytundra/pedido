@@ -1,60 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Protest+Riot&family=Roboto:wght@400;500;700&display=swap');
-
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Protest+Riot&family=Roboto:wght@400;500;700&display=swap");
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #E3F7FF;
-    font-family: Inter, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e3f7ff;
+  font-family: Inter, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .gif {
-    height: 450px;
-    width: 450px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: none;
-    box-sizng: border-box;
-    object-fit: cover;
+  height: auto;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: none;
+  box-sizing: border-box;
+    max-width: 400px; /* Limit maximum width to prevent stretching */
+  max-height: 400px;
 }
 
 h2 {
-    text-align: center;
-    font-size: 2em;
-    color: black;
-    margin: 15px 0;
+  text-align: center;
+  font-size: 2em;
+  color: black;
+  margin: 15px 0;
 }
 .btn-group {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    align-items: center;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  align-items: center;
 }
 button {
-    position: absolute;
-    margin-top: 20px;
-    margin-left: 10%;
-    width: 150px;
-    height: inherit;
-    color: black;
-    font-size: 1.2em;
-    border-radius: 30px;
-    outline: none;
-    cursor: pointer;
-    box-shadow: 0 2px 4px gray;
-    border: 2px solid lightblue;
-    font-size: 1.2em;
-    font-family: Inter, sans-serif;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 10%;
+  width: 17%;
+  height: inherit;
+  color: black;
+  font-size: 1.2em;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px gray;
+  border: 2px solid lightblue;
+  font-family: Inter, sans-serif;
 }
 p {
   text-align: center;
@@ -62,15 +56,44 @@ p {
 }
 .container {
   display: flex;
-  width: 70%;
   border-radius: 10%;
-  margin: 50px;
-  padding: 50px 100px 50px 100px;
+  margin: 10px;
+  padding: 20px;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
 }
 .left-side,
 .right-side {
   flex: 1;
   border: 1px;
+  width: 100%;
+}
+@media only screen and (max-width: 500px) {
+  .container {
+    flex-direction: stack; /* Stack elements vertically on smaller screens */
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%; /* Make both sides take full width on smaller screens */
+  }
+
+  .left-side {
+    margin-bottom: 20px; /* Add space between the sides */
+  }
+
+  .gif {
+    max-width: 80%; /* Adjust size of gif for smaller screens */
+    max-height: 80%;
+  }
+  h2 {
+    font-size: 1em;
+  }
+  p {
+    font-size: 0.5em;
+  }
+  button {
+    font-size: 0.5em;
+  }
 }
